@@ -40,8 +40,8 @@ export default ({ data }) => {
           px={[3, 3, 0]}
           color={colors.secondary}
         >
-          <h1>This could be another section</h1>
-          <p>With another text object</p>
+          <h1>How secure are we?</h1>
+          <p>That is the question</p>
         </Box>
       </Box>
     </div>

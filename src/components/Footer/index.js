@@ -1,16 +1,16 @@
 import React from 'react';
 import styled, { css } from 'react-emotion';
-import Link from 'gatsby-link';
+// import Link from 'gatsby-link';
 import PropTypes from 'prop-types';
 import colors from '../../utils/colors';
 import { Box, Flex } from '../Layout';
-import feather from '../../utils/feather';
-import media from '../../utils/media';
+// import feather from '../../utils/feather';
+// import media from '../../utils/media';
 
 const footerStyle = css`
   overflow: hidden;
-  background-color: ${colors.accent};
-  color: rgba(255, 255, 255, 0.5);
+  background-color: ${colors.secondary};
+  color: ${colors.footerText};
   text-align: center;
 
   & img {
@@ -18,33 +18,33 @@ const footerStyle = css`
     margin: 0;
   }
   & p {
-    color: rgba(255, 255, 255, 0.5);
+    color: ${colors.footerText};
   }
 `;
 
-const ulStyle = css`
-  list-style-type: none;
-  margin: 0;
-  margin-bottom: 1.45rem;
-  text-transform: uppercase;
-  padding: 0;
-  & a {
-    cursor: pointer;
-    opacity: 0.5;
-    transition: opacity 0.15s ease-in;
-    transition: color 0.15s ease-in;
+// const ulStyle = css`
+//   list-style-type: none;
+//   margin: 0;
+//   margin-bottom: 1.45rem;
+//   text-transform: uppercase;
+//   padding: 0;
+//   & a {
+//     cursor: pointer;
+//     opacity: 0.5;
+//     transition: opacity 0.15s ease-in;
+//     transition: color 0.15s ease-in;
 
-    &:hover {
-      text-decoration: none;
-      box-shadow: none;
-      opacity: 1;
-      transition: opacity 0.15s ease-in;
-    }
-  }
-  & li {
-    margin: 0;
-  }
-`;
+//     &:hover {
+//       text-decoration: none;
+//       box-shadow: none;
+//       opacity: 1;
+//       transition: opacity 0.15s ease-in;
+//     }
+//   }
+//   & li {
+//     margin: 0;
+//   }
+// `;
 
 const Wrapper = styled.div`
   width: 100%;
@@ -55,35 +55,35 @@ const Wrapper = styled.div`
   }
 `;
 
-const socialList = css`
-  display: flex;
-  justify-content: space-between;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+// const socialList = css`
+//   display: flex;
+//   justify-content: space-between;
+//   list-style-type: none;
+//   margin: 0;
+//   padding: 0;
 
-  ${media.large`
-    width: 50%;
-    margin-left: auto;
-  `};
-`;
+//   ${media.large`
+//     width: 50%;
+//     margin-left: auto;
+//   `};
+// `;
 
-const svgStyles = css`
-  opacity: 0.5;
-  transition: opacity 0.15s ease-in;
-  transition: color 0.15s ease-in;
+// const svgStyles = css`
+//   opacity: 0.5;
+//   transition: opacity 0.15s ease-in;
+//   transition: color 0.15s ease-in;
 
-  &:hover {
-    text-decoration: none;
-    box-shadow: none;
-    opacity: 1;
-    transition: opacity 0.15s ease-in;
-  }
-`;
+//   &:hover {
+//     text-decoration: none;
+//     box-shadow: none;
+//     opacity: 1;
+//     transition: opacity 0.15s ease-in;
+//   }
+// `;
 
 const Footer = props => (
   <div className={footerStyle}>
-    <Box p={[3, 3, 4]} align="left" color="white">
+    <Box p={[3, 3, 4]} align="left" color={colors.footerText}>
       <Flex wrap={['wrap', 'wrap', 'nowrap']} justify="space-between">
         <Box width={[1, 1, 1 / 3]}>
           <Wrapper>
@@ -92,7 +92,7 @@ const Footer = props => (
             </div>
           </Wrapper>
         </Box>
-        <Box width={[1, 1, 1 / 3]}>
+        {/* <Box width={[1, 1, 1 / 3]}>
           <Wrapper>
             <ul className={ulStyle}>
               <li>
@@ -106,8 +106,8 @@ const Footer = props => (
               </li>
             </ul>
           </Wrapper>
-        </Box>
-        <Box width={[1, 1, 1 / 3]}>
+        </Box> */}
+        {/* <Box width={[1, 1, 1 / 3]}>
           <Wrapper>
             <ul className={socialList}>
               <li>
@@ -147,29 +147,31 @@ const Footer = props => (
               </li>
             </ul>
           </Wrapper>
-        </Box>
+        </Box> */}
       </Flex>
     </Box>
-    <Box px={[3, 3, 1]} align="center">
+    {/* <Box px={[3, 3, 1]} align="center">
       <p>{`Copyright © 2017 ${props.name}. All rights reserved.`}</p>
-    </Box>
+    </Box> */}
   </div>
 );
 
 Footer.propTypes = {
-  name: PropTypes.string,
-  facebook: PropTypes.string,
-  twitter: PropTypes.string,
-  instagram: PropTypes.string,
-  email: PropTypes.string
+  name: PropTypes.string
+  // ,
+  // facebook: PropTypes.string,
+  // twitter: PropTypes.string,
+  // instagram: PropTypes.string,
+  // email: PropTypes.string
 };
 
 Footer.defaultProps = {
-  name: 'Gatbsythemes.com starter',
-  facebook: 'https://facebook.com',
-  twitter: 'https://twitter.com',
-  instagram: 'https://instagram',
-  email: ''
+  name: 'Secure Our Systems'
+  // ,
+  // facebook: 'https://facebook.com',
+  // twitter: 'https://twitter.com',
+  // instagram: 'https://instagram',
+  // email: ''
 };
 
 export default Footer;

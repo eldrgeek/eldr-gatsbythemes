@@ -1,5 +1,5 @@
 ---
-title: Example Post 2
+title: Example Post 4
 author: Mike Wolf
 date: 2017-10-19
 ---

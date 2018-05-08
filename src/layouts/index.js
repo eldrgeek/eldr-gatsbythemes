@@ -3,7 +3,7 @@ import styled, { injectGlobal } from 'react-emotion';
 import { fontSize } from 'styled-system';
 import PropTypes from 'prop-types';
 import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+// import Footer from '../components/Footer';
 import colors from '../utils/colors';
 
 /* eslint-disable */
@@ -43,7 +43,7 @@ const Layout = ({ children }) => (
   <FontConfig fontSize={[2, 3, 4]}>
     <Navigation />
     {children()}
-    <Footer />
+    {/* <Footer /> */}
   </FontConfig>
 );
 
