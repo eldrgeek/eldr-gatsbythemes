@@ -1,6 +1,6 @@
 ---
 title: Example Post 3
-author: Donald Duck
+author: Mike Wolf
 date: 2017-10-19
 ---
 

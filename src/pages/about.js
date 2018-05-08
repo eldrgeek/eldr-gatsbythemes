@@ -22,6 +22,7 @@ const About = ({ data }) => {
         <h1>About</h1>
         <Img className={imgStyle} alt="Picture of X" sizes={imageSharp.sizes} />
         <p>Here is some stuff about us. Yay!</p>
+        <p>Here is some stuff about the rest of us. Yay!</p>
       </Box>
     </Box>
   );
@@ -29,8 +30,8 @@ const About = ({ data }) => {
 
 export const pageQuery = graphql`
   query AboutQuery {
-    imageSharp(id: { regex: "/about/" }) {
-      sizes(maxWidth: 1000) {
+    imageSharp(id: { regex: "/car/" }) {
+      sizes(maxHeight: 400) {
         ...GatsbyImageSharpSizes
       }
     }
